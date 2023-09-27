@@ -7,8 +7,8 @@ easy-antispam is a middle platform system that utilizes artificial intelligence 
 **easy-antispam github** https://github.com/Hanxian2Ai/easy-antispam
 
 ## Links
-- [中文版](https://github.com/xpc1024/easy-es/blob/main/README-ZH.md)
-- [Samples](https://github.com/xpc1024/easy-es/tree/main/easy-es-sample)
+- [中文版]()
+- [Samples]()
 
 ## Features
 
