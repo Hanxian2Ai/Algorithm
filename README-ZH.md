@@ -1,7 +1,7 @@
 # easy-antispam
 
 ## What is easy-antispam?
-easy-antispam is a middle platform system that utilizes artificial intelligence technology to address content safety issues. It tackles risks and challenges such as false information, ideological biases, and even illegal activities brought about by UGC (User-Generated Content) and AIGC (Artificial Intelligence-Generated Content).
+easy-antispam是一个基于人工智能技术解决内容安全的中台系统,例如UGC和AIGC带来的诸如虚假信息、意识形态偏见、甚至是违法犯罪等的风险与挑战。
 
 ## Official website
 **easy-antispam github** https://github.com/Hanxian2Ai/easy-antispam
