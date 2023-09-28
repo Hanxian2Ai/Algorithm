@@ -11,11 +11,12 @@ easy-antispam is a middle platform system that utilizes artificial intelligence 
 - [Samples]()
 
 ## Features
-
-- Feature1  
+- Java-LTS-11-17-21
+- JVM
+- DDD
+- Ai+Docker
 
 ## Architecture
 
 ## License
-
 easy-antispam is under the Apache 2.0 license. See the [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0) file for details.
