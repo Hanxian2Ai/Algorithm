@@ -7,7 +7,7 @@ easy-antispam是一个基于人工智能技术解决内容安全的中台系统,
 **easy-antispam github** https://github.com/Hanxian2Ai/easy-antispam
 
 ## Links
-- [中文版](https://github.com/Hanxian2Ai/easy-antispam/blob/main/README-ZH.md)
+- [English](https://github.com/Hanxian2Ai/easy-antispam/blob/main/README.md)
 - [Samples]()
 
 ## 特性 | Features
