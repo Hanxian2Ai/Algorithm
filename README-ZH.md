@@ -17,7 +17,6 @@ easy-antispam是一个基于人工智能技术解决内容安全的中台系统,
 - DDD架构
 - Ai+Docker部署
 
-
 ## 架构 | Architecture
 
 ## 版权 | License
