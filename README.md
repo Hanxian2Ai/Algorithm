@@ -15,6 +15,7 @@ easy-antispam is a middle platform system that utilizes artificial intelligence 
 - JVM
 - DDD
 - Ai+Docker
+- Jmeter
 
 ## Architecture
 

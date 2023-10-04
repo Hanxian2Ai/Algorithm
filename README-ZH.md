@@ -11,7 +11,7 @@ easy-antispam是一个基于人工智能技术解决内容安全的中台系统,
 - [Samples]()
 
 ## 特性 | Features
-- Java-LTS版本-11-17-21
+- Java-LTS-11-17-21
 - JVM调优
 - 性能压测，冲击高QPS
 - DDD架构
