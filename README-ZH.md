@@ -18,6 +18,7 @@ easy-antispam是一个基于人工智能技术解决内容安全的中台系统,
 - Ai+Docker部署
 
 ## 架构 | Architecture
+DDD
 
 ## 版权 | License
 easy-antispam is under the Apache 2.0 license. See the [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0) file for details.

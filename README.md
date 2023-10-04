@@ -18,6 +18,7 @@ easy-antispam is a middle platform system that utilizes artificial intelligence 
 - Jmeter
 
 ## Architecture
+DDD
 
 ## License
 easy-antispam is under the Apache 2.0 license. See the [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0) file for details.
