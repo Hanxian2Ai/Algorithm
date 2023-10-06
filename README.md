@@ -11,12 +11,10 @@ brought about by UGC (User-Generated Content) and AIGC (Artificial Intelligence-
 **easy-antispam github** https://github.com/Hanxian2Ai/easy-antispam
 
 ## Links
-
 - [中文版](https://github.com/Hanxian2Ai/easy-antispam/blob/main/README-ZH.md)
 - [Samples]()
 
 ## Features
-
 - Java-LTS-11-17-21
 - JVM
 - DDD
@@ -24,7 +22,6 @@ brought about by UGC (User-Generated Content) and AIGC (Artificial Intelligence-
 - Jmeter
 
 ## Architecture
-
 DDD
 
 ## License

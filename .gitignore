@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
@@ -35,3 +36,16 @@ build/
 
 mvnw
 mvnw.cmd
+=======
+# Default ignored files
+/.idea/
+/shelf/
+/.idea/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+
+
+>>>>>>> feebee2f101fd943adb134b416510384c37d60c3
