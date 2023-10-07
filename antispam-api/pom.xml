@@ -9,23 +9,13 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.hanxian</groupId>
-    <artifactId>easy-antispam</artifactId>
+    <artifactId>antispam-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>pom</packaging>
-    <name>easy-antispam</name>
-
-    <modules>
-        <module>antispam-api</module>
-        <module>antispam-console</module>
-        <module>antispam-service</module>
-        <module>antispam-common</module>
-    </modules>
-
-    <description>easy-antispam</description>
+    <name>antispam-api</name>
+    <description>antispam-api</description>
     <properties>
         <java.version>21</java.version>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -44,7 +34,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>3.1.4</version>
             </plugin>
         </plugins>
     </build>
