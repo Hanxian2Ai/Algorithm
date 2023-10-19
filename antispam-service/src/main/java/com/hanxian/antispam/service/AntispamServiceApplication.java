@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class AntispamServiceApplication {
 
     public static void main(String[] args) {
+        System.out.println("哈哈哈哈");
         SpringApplication.run(AntispamServiceApplication.class, args);
     }
 
