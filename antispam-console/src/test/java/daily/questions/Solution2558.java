@@ -1,3 +1,5 @@
+package daily.questions;
+
 import java.util.PriorityQueue;
 
 class Solution2558 {
