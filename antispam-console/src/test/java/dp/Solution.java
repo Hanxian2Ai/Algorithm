@@ -1,6 +1,6 @@
 package dp;
 
-class Solution {
+public class Solution {
     public static void main(String[] args) {
         isSubsequence("abc","ahbgdc");
     }
