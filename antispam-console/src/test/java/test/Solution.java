@@ -4,8 +4,6 @@ import java.util.HashMap;
 
 class Solution {
     public int minSubArrayLen(int s, int[] nums) {
-
-        HashMap
         int n = nums.length;
         if (n == 0) {
             return 0;
