@@ -21,7 +21,7 @@ class Solution2304 {
                 }
             }
         }
-        int res = Integer.MAX_VALUE
+        int res = Integer.MAX_VALUE;
         for (int i = 0; i < n; i++) {
             res = Math.min(dp[m - 1][i], res);
         }
