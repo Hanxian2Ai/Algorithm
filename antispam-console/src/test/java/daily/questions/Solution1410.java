@@ -5,7 +5,7 @@ import java.util.Map.Entry;
 
 class Solution1410 {
 
-    private  final  static int size = 6;
+    private static final int size = 6;
     public String entityParser(String text) {
         HashMap<String, String> map = new HashMap<>(size);
         map.put("&quot;", "\"");
