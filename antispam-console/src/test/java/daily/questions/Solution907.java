@@ -1,24 +1,23 @@
 package daily.questions;
 
-import java.util.ArrayDeque;
-import java.util.Deque;
+import java.util.LinkedList;
 
 class Solution907 {
+    private static final int MOD = 1_000_000_007;
     public int sumSubarrayMins(int[] arr) {
-        int n = arr.length;
-        long ans = 0;
-        final int MOD = 1000000007;
-        Deque<Integer> monoStack = new ArrayDeque<Integer>();
-        int[] dp = new int[n];
-        for (int i = 0; i < n; i++) {
-            while (!monoStack.isEmpty() && arr[monoStack.peek()] > arr[i]) {
-                monoStack.pop();
+        int size = arr.length;
+        int[] dp = new int[size];
+        long res = 0;
+        LinkedList<Integer> stack = new LinkedList<>();
+        for(int i = 0; i < size; i++){
+            while(!stack.isEmpty() && arr[stack.peek()] > arr[i]){
+                stack.pop();
             }
-            int k = monoStack.isEmpty() ? (i + 1) : (i - monoStack.peek());
-            dp[i] = k * arr[i] + (monoStack.isEmpty() ? 0 : dp[i - k]);
-            ans = (ans + dp[i]) % MOD;
-            monoStack.push(i);
+            int k = stack.isEmpty()? i + 1 : (i - stack.peek());
+            dp[i] = k * arr[i] + (stack.isEmpty()? 0 : dp[i - k]);
+            res = (res + dp[i]) % MOD;
+            stack.push(i);
         }
-        return (int) ans;
+        return (int)res;
     }
 }
