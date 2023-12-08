@@ -5,58 +5,38 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.ArrayList;
+import java.util.List;
+
 @SpringBootTest(classes = AntispamConsoleApplication.class)
 class Solution {
-    public int minimumTotalPrice(int n, int[][] edges, int[] price, int[][] trips) {
-        ArrayList<ArrayList<Integer>> tree = new ArrayList<>();
-        for (int i = 0; i <= edges.length; i++) {
-            tree.add(new ArrayList<>());
-        }
-        for (int[] road : edges) {
-            int x = road[0];
-            int y = road[1];
-            tree.get(x).add(y);
-            tree.get(y).add(x);
-        }
-        int[] cnt = new int[n];
-        for (int[] trip : trips) {
-            dfs(trip[0], trip[1], -1, tree, cnt);
-        }
 
-        int[] res = dp(0, -1, price, tree , cnt);
-        return Math.min(res[0], res[1]);
-    }
-    private boolean dfs(int x , int end , int father, ArrayList<ArrayList<Integer>> tree, int[] cnt){
-        if (x == end){
-            cnt[x]++;
-            return true;
+    public int minReorder(int n, int[][] connections) {
+        List<int[]>[] e = new List[n];
+        for (int i = 0; i < n; i++) {
+            e[i] = new ArrayList<>();
         }
-        for (int node : tree.get(x)) {
-            if (node != father){
-                if (dfs(node, end , x, tree, cnt)){
-                    cnt[x]++;
-                    return true;
-                }
+        for (int[] edge : connections) {
+            int x = edge[0];
+            int y = edge[1];
+            e[x].add(new int[]{y, 1});
+            e[y].add(new int[]{x, 0});
+        }
+        return dfs(0, -1, e);
+    }
+
+    public int dfs(int x, int parent, List<int[]>[] e) {
+        int res = 0;
+        for (int[] edge : e[x]) {
+            if (edge[0] == parent) {
+                continue;
             }
+            res += edge[1] + dfs(edge[0], x, e);
         }
-        return false;
+        return res;
     }
-
-    private int[] dp(int node, int father, int[] price, ArrayList<ArrayList<Integer>> tree, int[] cnt){
-        int notHalf = price[node] * cnt[node];
-        int half  = notHalf / 2;
-        for (int child : tree.get(node)) {
-            if(child != father){
-                int[] res = dp(child , node, price, tree , cnt);
-                notHalf += Math.min(res[0], res[1]);
-                half += res[0];
-            }
-        }
-        return new int[]{notHalf, half};
-    }
-
     @Test
     public void test(){
-
+        int[][] c = {{1,0},{1,2},{3,2},{3,4}};
+        minReorder(5, c);
     }
 }
