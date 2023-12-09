@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootTest(classes = AntispamConsoleApplication.class)
-class Solution {
+class Solution1466 {
 
     public int minReorder(int n, int[][] connections) {
         List<int[]>[] e = new List[n];
