@@ -1,6 +1,6 @@
 package daily.questions;
 
-class Solution {
+class solution2132 {
     public boolean possibleToStamp(int[][] grid, int stampHeight, int stampWidth) {
         int m = grid.length;
         int n = grid[0].length;
