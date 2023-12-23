@@ -11,7 +11,7 @@ import java.util.PriorityQueue;
  * 优先队列 堆 原地堆化
  */
 @SpringBootTest(classes = AntispamConsoleApplication.class)
-class Solution {
+class Solution1962 {
     public int minStoneSum(int[] piles, int k) {
         PriorityQueue<Integer> queue = new PriorityQueue<>((a, b) -> b - a);
         int sum = 0;
