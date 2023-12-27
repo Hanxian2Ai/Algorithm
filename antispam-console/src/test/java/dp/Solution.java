@@ -1,36 +1,30 @@
 package dp;
 
-public class Solution {
-    public static void main(String[] args) {
-        isSubsequence("abc","ahbgdc");
+import com.hanxian.antispam.console.AntispamConsoleApplication;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest(classes = AntispamConsoleApplication.class)
+class Solution {
+    public int maxProfit(int k, int[] prices) {
+        int length = prices.length;
+        int[][] dp = new int[k + 1][2];
+        for (int i = 0; i < k; i++) {
+            dp[i + 1][0] = -prices[0];
+        }
+
+        for (int i = 1; i < length; i++) {
+            for (int j = 1; j < k; j++) {
+                dp[j][0] = Math.max(dp[j][0], dp[j - 1][1] - prices[i]);
+                dp[j][1] = Math.max(dp[j][1], dp[j - 1][0] + prices[i]);
+            }
+
+        }
+        return dp[k][1];
     }
-    public static boolean isSubsequence(String s, String t) {
-        int a = s.length();
-        int b = s.length();
-        int[][] dp = new int[a][b];
-        boolean mark = false;
 
-        for(int i = 0; i < b; i++){
-            if(s.charAt(0) == t.charAt(i)){
-                dp[0][i] = 1;
-                mark = true;
-            }
-            if(mark == true){
-                dp[0][i] = 1;
-            }
-        }
-        
-        for(int i = 1; i < a; i++){
-            for(int j = 1; j < b; j++){
-                if(s.charAt(i) == t.charAt(j)){
-                    dp[i][j] = dp[i-1][j-1] + 1;
-                }else{
-                    dp[i][j] = dp[i][j-1];
-                }
-            }
-        }
-        return dp[a -1][b-1]  == a;
-
-
+    @Test
+    public void test(){
+        maxProfit(2, new int[]{2,1,2,0,1});
     }
 }
