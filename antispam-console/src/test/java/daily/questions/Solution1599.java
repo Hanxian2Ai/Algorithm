@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * https://leetcode.cn/problems/maximum-profit-of-operating-a-centennial-wheel/description/
  * 蠢比模拟题 这辈子不做第二遍
  */
-class Solution {
+class Solution1599 {
     public static int minOperationsMaxProfit(int[] customers, int boardingCost, int runningCost) {
         int holdPeople = 0;
         ArrayList<Integer> list = new ArrayList<>();
