@@ -1,61 +1,31 @@
 package daily.questions;
 
+import java.util.HashMap;
 
+/**
+ * 383. 赎金信
+ * https://leetcode.cn/problems/ransom-note/description/?envType=daily-question&envId=2024-01-07
+ * hashMap或者数组 O(1)取元素
+ */
 class Solution {
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
+    public boolean canConstruct(String ransom, String magazine) {
+        HashMap<Character, Integer> map = new HashMap<>();
+        for (int i = 0; i < magazine.length(); i++) {
+            char c = magazine.charAt(i);
+            map.put(c, map.getOrDefault(c, 0) + 1);
         }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
-
-    public static ListNode insertGreatestCommonDivisors(ListNode head) {
-        ListNode last = head;
-        ListNode now = head.next;
-        while (now != null) {
-            int lastVal = last.val;
-            int nowVal = now.val;
-            int insertVal = 0;
-            if (lastVal > nowVal) {
-                insertVal = gcd(lastVal, nowVal);
-            } else {
-                insertVal = gcd(nowVal, lastVal);
+        for (int i = 0; i < ransom.length(); i++) {
+            char c = ransom.charAt(i);
+            if (!map.containsKey(c)) {
+                return false;
             }
-            ListNode insertNode = new ListNode(insertVal, now);
-            last.next = insertNode;
-            last = now;
-            now = now.next;
+            int cut = map.get(c);
+            if (cut == 1){
+                map.remove(c);
+            }else{
+                map.put(c, cut - 1);
+            }
         }
-        return head;
-    }
-
-    public static int gcd(int a, int b) {
-        if (b == 0) {
-            return a;
-        }
-        int c = a % b;
-        return gcd(b, c);
-    }
-
-    public static void main(String[] args) {
-        int[] nums = {18, 6, 10, 3};
-        ListNode  next = null;
-        for (int i = nums.length - 1; i >= 0; i--) {
-            ListNode listNode = new ListNode(nums[i], next);
-            next = listNode;
-        }
-        insertGreatestCommonDivisors(next);
-        System.out.println("hhh");
+        return true;
     }
 }
