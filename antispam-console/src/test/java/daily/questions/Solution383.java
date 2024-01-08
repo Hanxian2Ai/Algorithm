@@ -7,7 +7,7 @@ import java.util.HashMap;
  * https://leetcode.cn/problems/ransom-note/description/?envType=daily-question&envId=2024-01-07
  * hashMap或者数组 O(1)取元素
  */
-class Solution {
+class Solution383 {
     public boolean canConstruct(String ransom, String magazine) {
         HashMap<Character, Integer> map = new HashMap<>();
         for (int i = 0; i < magazine.length(); i++) {
