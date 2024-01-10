@@ -1,10 +1,5 @@
 package com.hanxian.algorithm.leetcode.questions;
 
-import com.hanxian.antispam.console.AntispamConsoleApplication;
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-
-@SpringBootTest(classes = AntispamConsoleApplication.class)
 class Solution1954 {
     public long minimumPerimeter(long neededApples) {
         long sum = 12;
@@ -23,7 +18,6 @@ class Solution1954 {
         return ((3L * n - 1) * n + n) * 4;
     }
 
-    @Test
     public void test() {
         minimumPerimeter(1000000000L);
     }

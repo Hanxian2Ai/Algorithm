@@ -1,13 +1,10 @@
 package com.hanxian.algorithm.leetcode.dp;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.Arrays;
 
-@SpringBootTest
 class Solution322 {
-    @Test
+
     public void test() {
         coinChange(new int[]{2}, 1);
     }

@@ -1,8 +1,6 @@
 package competition.weekly377;
 
-import com.hanxian.antispam.console.AntispamConsoleApplication;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.HashSet;
 
@@ -11,7 +9,6 @@ import java.util.HashSet;
  * https://leetcode.cn/problems/maximum-square-area-by-removing-fences-from-a-field/description/
  * hashSet 枚举
  */
-@SpringBootTest(classes = AntispamConsoleApplication.class)
 class Solution100169 {
         private static final int INF = 1_000_000_007;
         public int maximizeSquareArea(int m, int n, int[] hFences, int[] vFences) {

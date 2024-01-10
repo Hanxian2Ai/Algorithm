@@ -1,8 +1,6 @@
 package daily.questions;
 
-import com.hanxian.antispam.console.AntispamConsoleApplication;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.Arrays;
 
@@ -11,7 +9,6 @@ import java.util.Arrays;
  * 前后缀分解 + 最长子序列 nlogn
  * https://leetcode.cn/problems/minimum-number-of-removals-to-make-mountain-array/description/
  */
-@SpringBootTest(classes = AntispamConsoleApplication.class)
 class Solution1671 {
     private static void reverseArray(int[] array) {
         int start = 0;

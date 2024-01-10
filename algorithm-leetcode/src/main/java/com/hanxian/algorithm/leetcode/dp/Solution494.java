@@ -1,13 +1,9 @@
 package com.hanxian.algorithm.leetcode.dp;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.Arrays;
 
-@SpringBootTest
 class Solution494 {
-    @Test
     public void test() {
         int targetSumWays = findTargetSumWays(new int[]{10}, -10);
         System.out.println(targetSumWays);

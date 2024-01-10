@@ -1,12 +1,9 @@
 package daily.questions;
 
-import com.hanxian.antispam.console.AntispamConsoleApplication;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.ArrayList;
 
-@SpringBootTest(classes = AntispamConsoleApplication.class)
 class Solution2646 {
     public int minimumTotalPrice(int n, int[][] edges, int[] price, int[][] trips) {
         ArrayList<ArrayList<Integer>> tree = new ArrayList<>();

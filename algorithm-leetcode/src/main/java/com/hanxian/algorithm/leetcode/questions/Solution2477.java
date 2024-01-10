@@ -1,12 +1,8 @@
 package com.hanxian.algorithm.leetcode.questions;
 
-import com.hanxian.antispam.console.AntispamConsoleApplication;
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.ArrayList;
 
-@SpringBootTest(classes = {AntispamConsoleApplication.class})
 class Solution2477 {
 
     private long ans;
@@ -39,7 +35,6 @@ class Solution2477 {
         return size;
     }
 
-    @Test
     public void test() {
         int[][] arr = {{0, 1}, {0, 2}, {0, 3}};
         minimumFuelCost(arr, 5);

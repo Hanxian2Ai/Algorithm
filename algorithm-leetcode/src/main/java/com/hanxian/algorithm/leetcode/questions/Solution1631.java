@@ -1,14 +1,9 @@
 package com.hanxian.algorithm.leetcode.questions;
 
-import com.hanxian.antispam.console.AntispamConsoleApplication;
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-
 import java.util.LinkedList;
 import java.util.Queue;
 
 
-@SpringBootTest(classes = AntispamConsoleApplication.class)
 class Solution1631 {
 
     int[][] dirs = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
@@ -83,7 +78,6 @@ class Solution1631 {
         return false;
     }
 
-    @Test
     public void test() {
         int[][] x = {{1, 2, 2}, {3, 8, 2}, {5, 3, 5}};
         minimumEffortPathDFS(x);

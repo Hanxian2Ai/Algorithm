@@ -1,6 +1,5 @@
 package com.hanxian.algorithm.leetcode.questions;
 
-import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -35,7 +34,6 @@ class Solution1457 {
         record[root.val - 1] ^= 1;
     }
 
-    @Test
     public void main() {
         Integer[] nodes = new Integer[]{2, 1, 1, 1, 3, null, null, null, null, null, 1};
         TreeNode treeNode = new TreeNode();
