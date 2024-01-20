@@ -9,7 +9,7 @@ import java.util.List;
  * 2809. 使数组和小于等于 x 的最少时间
  * dp 0-1背包
  */
-class Solution {
+class Solution2809 {
     public int minimumTime(List<Integer> nums1, List<Integer> nums2, int x) {
         int n = nums1.size(), s1 = 0, s2 = 0;
         int[][] pairs = new int[n][2];
