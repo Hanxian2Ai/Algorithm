@@ -5,6 +5,7 @@ import java.util.HashSet;
 /**
  * 2670. 找出不同元素数目差数组
  * https://leetcode.cn/problems/find-the-distinct-difference-array/description/
+ * 简单题
  */
 class Solution2670 {
     public int[] distinctDifferenceArray(int[] nums) {
