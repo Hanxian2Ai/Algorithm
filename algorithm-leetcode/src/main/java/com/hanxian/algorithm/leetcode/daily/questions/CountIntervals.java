@@ -12,7 +12,7 @@ class CountIntervals {
 
     public void add(int left, int right) {
         Integer L = map.floorKey(right);
-        while(L!= null && map.get(L) >= left){
+        while (L != null && map.get(L) >= left) {
             left = Math.min(left, L);
             right = Math.max(right, map.get(L));
             sum -= map.get(L) - L + 1;
