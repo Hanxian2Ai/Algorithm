@@ -24,6 +24,6 @@ class Solution1457TwiceTest {
         final int result = solution1457TwiceUnderTest.pseudoPalindromicPaths(root);
 
         // Verify the results
-        assertThat(result).isEqualTo(0);
+        assertThat(result).isEqualTo(1);
     }
 }
