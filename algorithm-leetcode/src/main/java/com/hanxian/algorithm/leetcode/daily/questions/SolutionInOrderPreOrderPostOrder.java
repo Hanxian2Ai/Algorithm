@@ -93,4 +93,35 @@ public class SolutionInOrderPreOrderPostOrder {
             curr = curr.getRight();
         }
     }
+
+    public List<Integer> preorderMorris(TreeNode root) {
+        TreeNode curr = root;
+        ArrayList<Integer> res = new ArrayList<>();
+        while (curr != null) {
+            if (curr.getLeft() == null) {
+                // 访问当前节点
+                res.add(curr.getVal());
+                // 向右子树移动
+                curr = curr.getRight();
+            } else {
+                // 在当前节点的左子树中找到前驱节点
+                TreeNode predecessor = curr.getLeft();
+                while (predecessor.getRight() != null && predecessor.getRight() != curr) {
+                    predecessor = predecessor.getRight();
+                }
+                if (predecessor.getRight() == null) {
+                    // 访问当前节点
+                    res.add(curr.getVal());
+                    predecessor.setRight(curr);
+                    // 向左子树移动
+                    curr = curr.getLeft();
+                } else {
+                    predecessor.setRight(null);
+                    // 向右子树移动
+                    curr = curr.getRight();
+                }
+            }
+        }
+        return res;
+    }
 }
